@@ -1,14 +1,13 @@
 doctype html
-html(lang='en')
+html(lang='es')
 
     head
-
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='Trámites vehiculares rápidos y seguros en línea')
+        meta(name='author', content='Tránsito Express JD')
 
-        title Landing Page - Start Bootstrap Theme
+        title Tránsito Express JD | Trámites 100% Online
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -17,228 +16,226 @@ html(lang='en')
         link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet', type='text/css')
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Inter:300,400,600,700', rel='stylesheet', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
-    body
+    body.bg-light
 
         // Navigation
-        nav.navbar.navbar-light.bg-light.static-top
+        nav.navbar.navbar-light.bg-white.static-top.shadow-sm.py-3
             .container
-                a.navbar-brand(href='#!') Start Bootstrap
-                a.btn.btn-primary(href='#signup') Sign Up
+                a.navbar-brand.fw-bold.fs-4(href='#!') Tránsito Express JD
+                a.btn.btn-dark.rounded-pill.px-4(href='#pricing') Ver Precios
 
-        // Masthead
+        // Masthead (Hero Section)
         header.masthead
             .container.position-relative
                 .row.justify-content-center
-                    .col-xl-6
+                    .col-xl-8
                         .text-center.text-white
-                            // Page heading
-                            h1.mb-5 Generate more leads with a professional landing page!
+                            h1.mb-4.fw-bold.display-4 Cero filas. Cero estrés. Trámites vehiculares a un clic.
+                            p.lead.mb-5.fw-light Eres conductor, tu lugar está en la vía, no en una sala de espera. Resolvemos tus traspasos, SOAT y licencias de forma rápida y transparente.
+                            a.btn.btn-primary.btn-lg.px-5.rounded-pill.shadow(href='#services') Conoce Nuestros Servicios
 
-                            // Signup form
-
-                            // * * * * * * * * * * * * * * *
-                            // * * SB Forms Contact Form * *
-                            // * * * * * * * * * * * * * * *
-
-                            // This form is pre-integrated with SB Forms.
-                            // To make this form functional, sign up at
-                            // https://startbootstrap.com/solution/contact-forms
-                            // to get an API token!
-
-                            form.form-subscribe#contactForm(data-sb-form-api-token='API_TOKEN')
-
-                                // Email address input
-                                .row
-                                    .col
-                                        input#emailAddress.form-control.form-control-lg(type='email' placeholder='Email Address' data-sb-validations='required,email')
-                                        .invalid-feedback.text-white(data-sb-feedback='emailAddress:required')
-                                            | Email Address is required.
-                                        .invalid-feedback.text-white(data-sb-feedback='emailAddress:email')
-                                            | Email Address Email is not valid.
-
-                                    .col-auto
-                                        button#submitButton.btn.btn-primary.btn-lg.disabled(type='submit') Submit
-
-                                // Submit success message
-                                //
-                                // This is what your users will see when the form
-                                // has successfully submitted
-
-                                #submitSuccessMessage.d-none
-                                    .text-center.mb-3
-                                        .fw-bolder Form submission successful!
-                                        p To activate this form, sign up at
-                                        a.text-white(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
-
-                                // Submit error message
-                                //
-                                // This is what your users will see when there is
-                                // an error submitting the form
-
-                                #submitErrorMessage.d-none
-                                    .text-center.text-danger.mb-3 Error sending message!
-
-        // Icons Grid
-        section.features-icons.bg-light.text-center
+        
+        section.payment-methods.bg-white.py-4.border-bottom
             .container
-                .row
+                .row.align-items-center.justify-content-center.text-center
+                    .col-12
+                        p.text-muted.small.mb-3.text-uppercase.fw-bold.letter-spacing-1 Pagos 100% seguros y respaldados a través de
+                        .d-flex.justify-content-center.gap-4.opacity-75.flex-wrap
+                            .d-flex.align-items-center.gap-2.text-muted
+                                i.bi.bi-credit-card.fs-2
+                                span.fw-semibold Tarjetas
+                            .d-flex.align-items-center.gap-2.text-muted
+                                i.bi.bi-phone.fs-2
+                                span.fw-semibold PSE / Nequi
+                            .d-flex.align-items-center.gap-2.text-muted
+                                i.bi.bi-cash-coin.fs-2
+                                span.fw-semibold Efectivo
+
+        // Features 
+        section.features-icons.bg-white.text-center.py-5
+            .container.py-4
+                .row.g-5
                     .col-lg-4
-                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
-                            .features-icons-icon.d-flex
-                                i.bi-window.m-auto.text-primary
-                            h3 Fully Responsive
-                            p.lead.mb-0 This theme will look great on any device, no matter the size!
+                        .features-icons-item.mx-auto
+                            .features-icons-icon.d-flex.mb-4
+                                i.bi-laptop.m-auto.text-primary.display-3
+                            h3.fw-bold 100% Digital
+                            p.text-muted.mb-0 Cero filas, cero estrés. Resuelve todos tus trámites desde el celular o computador, sin pisar una oficina.
                     .col-lg-4
-                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
-                            .features-icons-icon.d-flex
-                                i.bi-layers.m-auto.text-primary
-                            h3 Bootstrap 5 Ready
-                            p.lead.mb-0 Featuring the latest build of the new Bootstrap 5 framework!
+                        .features-icons-item.mx-auto
+                            .features-icons-icon.d-flex.mb-4
+                                i.bi-shield-check.m-auto.text-primary.display-3
+                            h3.fw-bold Transacciones Protegidas
+                            p.text-muted.mb-0 Paga como quieras. Aceptamos PSE, PayPal y tarjetas con encriptación de máxima seguridad.
                     .col-lg-4
-                        .features-icons-item.mx-auto.mb-0.mb-lg-3
-                            .features-icons-icon.d-flex
-                                i.bi-terminal.m-auto.text-primary
-                            h3 Easy to Use
-                            p.lead.mb-0 Ready to use with your own content, or customize the source files!
+                        .features-icons-item.mx-auto
+                            .features-icons-icon.d-flex.mb-4
+                                i.bi-chat-dots.m-auto.text-primary.display-3
+                            h3.fw-bold Soporte Especializado
+                            p.text-muted.mb-0 Asesoría continua. Nuestro equipo resuelve tus inquietudes para garantizar un trámite exitoso.
 
         // Image Showcases
-        section.showcase
+        section#services.showcase
             .container-fluid.p-0
                 .row.g-0
-                    .col-lg-6.order-lg-2.text-white.showcase-img(style="background-image: url('assets/img/bg-showcase-1.jpg');")
-                    .col-lg-6.order-lg-1.my-auto.showcase-text
-                        h2 Fully Responsive Design
-                        p.lead.mb-0
-                            | When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!
+                    .col-lg-6.order-lg-2.text-white.showcase-img(style="background-image: url('assets/img/traspaso.jpg');")
+                    .col-lg-6.order-lg-1.my-auto.showcase-text.bg-light
+                        h2.fw-bold Traspasos Sin Estrés
+                        p.lead.text-muted.mb-0
+                            | Deja el papeleo pesado en nuestras manos. Gestionamos el cambio de propietario de tu vehículo de forma 100% legal, segura y sin complicaciones.
                 .row.g-0
-                    .col-lg-6.text-white.showcase-img(style="background-image: url('assets/img/bg-showcase-2.jpg');")
-                    .col-lg-6.my-auto.showcase-text
-                        h2 Updated For Bootstrap 5
-                        p.lead.mb-0
-                            | Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!
+                    .col-lg-6.text-white.showcase-img(style="background-image: url('assets/img/soat1.png');")
+                    .col-lg-6.my-auto.showcase-text.bg-white
+                        h2.fw-bold SOAT Digital al Instante
+                        p.lead.text-muted.mb-0
+                            | Proceso de compra y emisión del seguro obligatorio a través de nuestra plataforma. Fácil, rápido y directo a tu correo.
                 .row.g-0
-                    .col-lg-6.order-lg-2.text-white.showcase-img(style="background-image: url('assets/img/bg-showcase-3.jpg');")
-                    .col-lg-6.order-lg-1.my-auto.showcase-text
-                        h2 Easy to Use & Customize
-                        p.lead.mb-0
-                            | Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!
+                    .col-lg-6.order-lg-2.text-white.showcase-img(style="background-image: url('assets/img/licencia.jpeg');")
+                    .col-lg-6.order-lg-1.my-auto.showcase-text.bg-light
+                        h2.fw-bold Duplicados Rápidos
+                        p.lead.text-muted.mb-0
+                            | Solicitud y gestión en línea para obtener una copia adicional de tu licencia de conducción sin tener que ir a hacer largas filas.
 
-        // Testimonials
-        section.testimonials.text-center.bg-light
-            .container
-                h2.mb-5 What people are saying...
-                .row
-                    .col-lg-4
-                        .testimonial-item.mx-auto.mb-5.mb-lg-0
-                            img.img-fluid.rounded-circle.mb-3(src='assets/img/testimonials-1.jpg', alt='...')
-                            h5 Margaret E.
-                            p.font-weight-light.mb-0 "This is fantastic! Thanks so much guys!"
-                    .col-lg-4
-                        .testimonial-item.mx-auto.mb-5.mb-lg-0
-                            img.img-fluid.rounded-circle.mb-3(src='assets/img/testimonials-2.jpg', alt='...')
-                            h5 Fred S.
-                            p.font-weight-light.mb-0
-                                | "Bootstrap is amazing. I've been using it to create lots of super nice landing pages."
-                    .col-lg-4
-                        .testimonial-item.mx-auto.mb-5.mb-lg-0
-                            img.img-fluid.rounded-circle.mb-3(src='assets/img/testimonials-3.jpg', alt='...')
-                            h5 Sarah W.
-                            p.font-weight-light.mb-0 "Thanks so much for making these free resources available to us!"
+        // Pricing Section
+        section#pricing.pricing.py-5.bg-white
+            .container.py-5
+                .text-center.mb-5
+                    h2.fw-bold.display-6 Precios Estimados
+                    p.text-muted.lead Valores aproximados según tarifas oficiales.
+                .row.g-4.justify-content-center
+                    // Pricing Card 1
+                    .col-lg-4.col-md-6
+                        .card.h-100.shadow-sm.border-0.bg-light.rounded-4
+                            .card-body.p-5.text-center
+                                h5.card-title.text-muted.text-uppercase.fw-bold.mb-4 Traspaso
+                                h2.mb-1.display-5.fw-bold $25 
+                                    span.fs-6.text-muted USD
+                                p.text-muted.small.mb-2 (Dentro de la ciudad)
+                                p.text-muted.small.mb-4 $35 USD (Fuera de la ciudad)
+                                ul.list-unstyled.mb-4.text-start.mx-auto(style="max-width: 200px;")
+                                    li.mb-2 #[i.bi.bi-check-circle-fill.text-primary.me-2] Gestión 100% digital
+                                    li.mb-2 #[i.bi.bi-check-circle-fill.text-primary.me-2] Asesoría paso a paso
+                                a.btn.btn-outline-primary.w-100.rounded-pill.fw-bold(href='#') Solicitar
+                    // Pricing Card 2 
+                    .col-lg-4.col-md-6
+                        .card.h-100.shadow-lg.border-primary.border-2.rounded-4.position-relative
+                            .position-absolute.top-0.start-50.translate-middle.badge.rounded-pill.bg-primary.px-3.py-2 ¡Más Solicitado!
+                            .card-body.p-5.text-center
+                                h5.card-title.text-primary.text-uppercase.fw-bold.mb-4 SOAT Digital
+                                h2.mb-1.display-5.fw-bold $15 
+                                    span.fs-6.text-muted USD
+                                p.text-muted.small.mb-4 + Tarifa según vehículo
+                                ul.list-unstyled.mb-4.text-start.mx-auto(style="max-width: 200px;")
+                                    li.mb-2 #[i.bi.bi-check-circle-fill.text-primary.me-2] Emisión rápida
+                                    li.mb-2 #[i.bi.bi-check-circle-fill.text-primary.me-2] Compra segura
+                                a.btn.btn-primary.w-100.rounded-pill.fw-bold.shadow-sm(href='#') Comprar SOAT
+                    // Pricing Card 3
+                    .col-lg-4.col-md-6
+                        .card.h-100.shadow-sm.border-0.bg-light.rounded-4
+                            .card-body.p-5.text-center
+                                h5.card-title.text-muted.text-uppercase.fw-bold.mb-4 Duplicado Licencia
+                                h2.mb-1.display-5.fw-bold $25 
+                                    span.fs-6.text-muted USD
+                                p.text-muted.small.mb-4 Tarifa fija aproximada
+                                ul.list-unstyled.mb-4.text-start.mx-auto(style="max-width: 200px;")
+                                    li.mb-2 #[i.bi.bi-check-circle-fill.text-primary.me-2] Solicitud en línea
+                                    li.mb-2 #[i.bi.bi-check-circle-fill.text-primary.me-2] Envío seguro
+                                a.btn.btn-outline-primary.w-100.rounded-pill.fw-bold(href='#') Gestionar Copia
+        // How it Works Section
+        section.how-it-works.py-5.bg-white
+            .container.py-5
+                .text-center.mb-5
+                    h2.fw-bold.display-6 ¿Cómo Funciona?
+                    p.text-muted.lead Tu trámite listo en 3 simples pasos.
+                .row.g-4.text-center
+                    .col-md-4
+                        .step-box.p-4.h-100
+                            .step-number.bg-primary.text-white.rounded-circle.d-inline-flex.align-items-center.justify-content-center.mb-4.shadow(style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;") 1
+                            h4.fw-bold Cotiza
+                            p.text-muted Escríbenos por WhatsApp y cuéntanos qué trámite necesitas. Te daremos el valor y los requisitos al instante.
+                    .col-md-4
+                        .step-box.p-4.h-100
+                            .step-number.bg-primary.text-white.rounded-circle.d-inline-flex.align-items-center.justify-content-center.mb-4.shadow(style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;") 2
+                            h4.fw-bold Envía Requisitos
+                            p.text-muted Te pediremos los documentos necesarios de forma digital y segura. Cero papeleo innecesario.
+                    .col-md-4
+                        .step-box.p-4.h-100
+                            .step-number.bg-primary.text-white.rounded-circle.d-inline-flex.align-items-center.justify-content-center.mb-4.shadow(style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;") 3
+                            h4.fw-bold Relájate
+                            p.text-muted Nosotros hacemos las filas y la gestión por ti. Recibe tu documento validado y legalizado sin estrés.
 
-        // Call to Action
-        section#signup.call-to-action.text-white.text-center
-            .container.position-relative
+        // FAQ Section 
+        section.faq.py-5.bg-light
+            .container.py-5
                 .row.justify-content-center
-                    .col-xl-6
-                        h2.mb-4 Ready to get started? Sign up now!
-                        // Signup form
+                    .col-lg-8
+                        .text-center.mb-5
+                            h2.fw-bold.display-6 Preguntas Frecuentes
+                            p.text-muted Todo transparente, sin letras pequeñas.
+                        .accordion#faqAccordion
+                            .accordion-item.border-0.shadow-sm.mb-3.rounded-3.overflow-hidden
+                                h2.accordion-header#headingOne
+                                    button.accordion-button.fw-bold.bg-white(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                                        | ¿Los trámites son 100% legales y seguros?
+                                .accordion-collapse.collapse.show#collapseOne(aria-labelledby='headingOne' data-bs-parent='#faqAccordion')
+                                    .accordion-body.text-muted.bg-white
+                                        | Totalmente. Trabajamos bajo la normativa vigente y registramos todo directamente en las plataformas oficiales (RUNT, SIM, Secretarías de Tránsito) para garantizar la total legalidad de tus documentos.
+                            .accordion-item.border-0.shadow-sm.mb-3.rounded-3.overflow-hidden
+                                h2.accordion-header#headingTwo
+                                    button.accordion-button.collapsed.fw-bold.bg-white(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+                                        | ¿Cuáles son los métodos de pago aceptados?
+                                .accordion-collapse.collapse#collapseTwo(aria-labelledby='headingTwo' data-bs-parent='#faqAccordion')
+                                    .accordion-body.text-muted.bg-white
+                                        | Para tu comodidad y seguridad, aceptamos transferencias bancarias, PSE, Nequi, Daviplata y tarjetas de crédito.
+                            .accordion-item.border-0.shadow-sm.mb-3.rounded-3.overflow-hidden
+                                h2.accordion-header#headingThree
+                                    button.accordion-button.collapsed.fw-bold.bg-white(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+                                        | ¿Cuánto tiempo tarda un traspaso vehicular?
+                                .accordion-collapse.collapse#collapseThree(aria-labelledby='headingThree' data-bs-parent='#faqAccordion')
+                                    .accordion-body.text-muted.bg-white
+                                        | El tiempo puede variar según el organismo de tránsito de la ciudad, pero en promedio la gestión se radica y aprueba entre 3 y 5 días hábiles una vez tengamos todos los documentos en regla.
+
+        // Call to Action 
+        section.call-to-action.text-center.py-5.bg-light
+            .container.py-5
+                // Título introductorio antes de la tarjeta
+                .text-center.mb-5
+                    h2.fw-bold.display-6 Atención Personalizada
+                    p.text-muted.lead Estamos a un mensaje de distancia para resolver tus dudas.
+
+            
+                .row.justify-content-center
+                    .col-lg-8.col-xl-7
                         
-                        // * * * * * * * * * * * * * * *
-                        // * * SB Forms Contact Form * *
-                        // * * * * * * * * * * * * * * *
-
-                        // This form is pre-integrated with SB Forms.
-                        // To make this form functional, sign up at
-                        // https://startbootstrap.com/solution/contact-forms
-                        // to get an API token!
-
-                        form.form-subscribe#contactFormFooter(data-sb-form-api-token='API_TOKEN')
-
-                            // Email address input
-                            .row
-                                .col
-                                    input#emailAddressBelow.form-control.form-control-lg(type='email' placeholder='Email Address' data-sb-validations='required,email')
-                                    .invalid-feedback.text-white(data-sb-feedback='emailAddressBelow:required')
-                                        | Email Address is required.
-                                    .invalid-feedback.text-white(data-sb-feedback='emailAddressBelow:email')
-                                        | Email Address Email is not valid.
-
-                                .col-auto
-                                    button#submitButton.btn.btn-primary.btn-lg.disabled(type='submit') Submit
-
-                            // Submit success message
-                            //
-                            // This is what your users will see when the form
-                            // has successfully submitted
-
-                            #submitSuccessMessage.d-none
-                                .text-center.mb-3
-                                    .fw-bolder Form submission successful!
-                                    p To activate this form, sign up at
-                                    a.text-white(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
-
-                            // Submit error message
-                            //
-                            // This is what your users will see when there is
-                            // an error submitting the form
-
-                            #submitErrorMessage.d-none
-                                .text-center.text-danger.mb-3 Error sending message!
+                        .card.shadow-lg.rounded-4.border.border-primary.border-2.overflow-hidden
+                            // Fondo blanco en el cuerpo de la tarjeta
+                            .card-body.p-5.bg-white
+                                h3.fw-bold.text-primary.mb-3 ¿Listo para agilizar tus trámites?
+                                p.text-muted.mb-4.lead Escríbenos ahora mismo. Un asesor humano está listo para ayudarte con tu proceso de forma inmediata.
+                                a.btn.btn-success.btn-lg.px-5.py-3.rounded-pill.fw-bold.shadow-sm.d-inline-flex.align-items-center(href='https://wa.me/573204091974' target='_blank')
+                                    i.bi.bi-whatsapp.me-2.fs-4
+                                    | Contáctanos por WhatsApp
+                                p.small.text-muted.mt-4.mb-0 * Tiempo de respuesta estimado: 5 minutos.
 
         // Footer
-        footer.footer.bg-light
+        footer.footer.bg-white.py-4.border-top
             .container
-                .row
-                    .col-lg-6.h-100.text-center.text-lg-start.my-auto
-                        ul.list-inline.mb-2
-                            li.list-inline-item
-                                a(href='#!') About
-                            li.list-inline-item ⋅
-                            li.list-inline-item
-                                a(href='#!') Contact
-                            li.list-inline-item ⋅
-                            li.list-inline-item
-                                a(href='#!') Terms of Use
-                            li.list-inline-item ⋅
-                            li.list-inline-item
-                                a(href='#!') Privacy Policy
-                        p.text-muted.small.mb-4.mb-lg-0 &copy; Your Website 2023. All Rights Reserved.
-                    .col-lg-6.h-100.text-center.text-lg-end.my-auto
+                .row.align-items-center
+                    .col-lg-6.text-center.text-lg-start
+                        p.text-muted.small.mb-0 &copy; Tránsito Express JD 2026. Todos los derechos reservados.
+                    .col-lg-6.text-center.text-lg-end.mt-3.mt-lg-0
                         ul.list-inline.mb-0
-                            li.list-inline-item.me-4
-                                a(href='#!')
-                                    i.bi-facebook.fs-3
-                            li.list-inline-item.me-4
-                                a(href='#!')
-                                    i.bi-twitter.fs-3
+                            li.list-inline-item.me-3
+                                a.text-muted(href='#!') #[i.bi.bi-facebook.fs-4]
                             li.list-inline-item
-                                a(href='#!')
-                                    i.bi-instagram.fs-3
+                                a.text-muted(href='#!') #[i.bi.bi-instagram.fs-4]
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
-
         // Core theme JS
         script(src='js/scripts.js')
-
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // * *                               SB Forms JS                               * *
-        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
