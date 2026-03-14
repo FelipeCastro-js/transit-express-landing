@@ -6,3 +6,35 @@ footer.footer {
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(13, 110, 253, 0.1); 
+    color: var(--bs-primary);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    text-decoration: none;
+
+    &:hover {
+        background-color: var(--bs-primary); 
+        color: #fff;
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    i {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+}

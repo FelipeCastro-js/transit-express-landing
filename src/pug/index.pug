@@ -22,6 +22,7 @@ html(lang='es')
         link(href='css/styles.css', rel='stylesheet')
 
     body.bg-light
+    body#page-top.bg-light
 
         // Navigation
         nav.navbar.navbar-light.bg-white.static-top.shadow-sm.py-3
@@ -178,13 +179,25 @@ html(lang='es')
                             h2.fw-bold.display-6 Preguntas Frecuentes
                             p.text-muted Todo transparente, sin letras pequeñas.
                         .accordion#faqAccordion
+                           
+                            .accordion-item.border-0.shadow-sm.mb-3.rounded-3.overflow-hidden
+                                h2.accordion-header#headingIntro
+                                    button.accordion-button.fw-bold.bg-white.text-primary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseIntro' aria-expanded='true' aria-controls='collapseIntro')
+                                        i.bi.bi-emoji-sunglasses.me-2
+                                        | ¿Quiénes están detrás del volante en Tránsito Express JD?
+                                .accordion-collapse.collapse.show#collapseIntro(aria-labelledby='headingIntro' data-bs-parent='#faqAccordion')
+                                    .accordion-body.text-muted.bg-white
+                                        | ¡Hola! Somos apasionados por el mundo motor y enemigos número uno de la burocracia. Nacimos de la experiencia real administrando concesionarios de motocicletas en Villeta, Cundinamarca. Sabemos perfectamente lo frustrante que es perder un día entero haciendo filas, por eso decidimos usar la tecnología para transformar un dolor de cabeza en un proceso de un par de clics. No somos un bot más, somos tu copiloto de confianza.
+                            
                             .accordion-item.border-0.shadow-sm.mb-3.rounded-3.overflow-hidden
                                 h2.accordion-header#headingOne
-                                    button.accordion-button.fw-bold.bg-white(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                                    button.accordion-button.collapsed.fw-bold.bg-white(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
                                         | ¿Los trámites son 100% legales y seguros?
-                                .accordion-collapse.collapse.show#collapseOne(aria-labelledby='headingOne' data-bs-parent='#faqAccordion')
+                                .accordion-collapse.collapse#collapseOne(aria-labelledby='headingOne' data-bs-parent='#faqAccordion')
                                     .accordion-body.text-muted.bg-white
                                         | Totalmente. Trabajamos bajo la normativa vigente y registramos todo directamente en las plataformas oficiales (RUNT, SIM, Secretarías de Tránsito) para garantizar la total legalidad de tus documentos.
+                            
+                            
                             .accordion-item.border-0.shadow-sm.mb-3.rounded-3.overflow-hidden
                                 h2.accordion-header#headingTwo
                                     button.accordion-button.collapsed.fw-bold.bg-white(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
@@ -192,6 +205,8 @@ html(lang='es')
                                 .accordion-collapse.collapse#collapseTwo(aria-labelledby='headingTwo' data-bs-parent='#faqAccordion')
                                     .accordion-body.text-muted.bg-white
                                         | Para tu comodidad y seguridad, aceptamos transferencias bancarias, PSE, Nequi, Daviplata y tarjetas de crédito.
+                            
+                           
                             .accordion-item.border-0.shadow-sm.mb-3.rounded-3.overflow-hidden
                                 h2.accordion-header#headingThree
                                     button.accordion-button.collapsed.fw-bold.bg-white(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
@@ -203,7 +218,6 @@ html(lang='es')
         // Call to Action 
         section.call-to-action.text-center.py-5.bg-light
             .container.py-5
-                // Título introductorio antes de la tarjeta
                 .text-center.mb-5
                     h2.fw-bold.display-6 Atención Personalizada
                     p.text-muted.lead Estamos a un mensaje de distancia para resolver tus dudas.
@@ -213,7 +227,6 @@ html(lang='es')
                     .col-lg-8.col-xl-7
                         
                         .card.shadow-lg.rounded-4.border.border-primary.border-2.overflow-hidden
-                            // Fondo blanco en el cuerpo de la tarjeta
                             .card-body.p-5.bg-white
                                 h3.fw-bold.text-primary.mb-3 ¿Listo para agilizar tus trámites?
                                 p.text-muted.mb-4.lead Escríbenos ahora mismo. Un asesor humano está listo para ayudarte con tu proceso de forma inmediata.
@@ -223,17 +236,27 @@ html(lang='es')
                                 p.small.text-muted.mt-4.mb-0 * Tiempo de respuesta estimado: 5 minutos.
 
         // Footer
-        footer.footer.bg-white.py-4.border-top
+        
+        // Footer (AQUÍ VAN LOS TÉRMINOS Y CONDICIONES)
+        footer.footer.bg-white.py-5.border-top
             .container
                 .row.align-items-center
-                    .col-lg-6.text-center.text-lg-start
+                    .col-lg-4.text-center.text-lg-start.mb-3.mb-lg-0
                         p.text-muted.small.mb-0 &copy; Tránsito Express JD 2026. Todos los derechos reservados.
-                    .col-lg-6.text-center.text-lg-end.mt-3.mt-lg-0
+                    .col-lg-4.text-center.mb-3.mb-lg-0
+                        // Enlaces legales limpios y organizados
+                        a.text-muted.small.text-decoration-none.me-3(href='#!') Términos y Condiciones
+                        a.text-muted.small.text-decoration-none(href='#!') Política de Privacidad
+                    .col-lg-4.text-center.text-lg-end
                         ul.list-inline.mb-0
                             li.list-inline-item.me-3
-                                a.text-muted(href='#!') #[i.bi.bi-facebook.fs-4]
+                                a.text-muted.fs-5(href='#!') #[i.bi.bi-facebook]
                             li.list-inline-item
-                                a.text-muted(href='#!') #[i.bi.bi-instagram.fs-4]
+                                a.text-muted.fs-5(href='#!') #[i.bi.bi-instagram]
+
+        // Botón sutil flotante de Volver Arriba
+        a.scroll-to-top.rounded-circle(href='#page-top', aria-label='Volver arriba')
+            i.bi.bi-chevron-up
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')

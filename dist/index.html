@@ -15,7 +15,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body class="bg-light">
+    <body class="bg-light"></body>
+    <body class="bg-light" id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-white static-top shadow-sm py-3">
             <div class="container">
@@ -242,8 +243,17 @@
                         </div>
                         <div class="accordion" id="faqAccordion">
                             <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                                <h2 class="accordion-header" id="headingOne"><button class="accordion-button fw-bold bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Los trámites son 100% legales y seguros?</button></h2>
-                                <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted bg-white">Totalmente. Trabajamos bajo la normativa vigente y registramos todo directamente en las plataformas oficiales (RUNT, SIM, Secretarías de Tránsito) para garantizar la total legalidad de tus documentos.</div></div>
+                                <h2 class="accordion-header" id="headingIntro">
+                                    <button class="accordion-button fw-bold bg-white text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
+                                        <i class="bi bi-emoji-sunglasses me-2"></i>
+                                        ¿Quiénes están detrás del volante en Tránsito Express JD?
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse collapse show" id="collapseIntro" aria-labelledby="headingIntro" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted bg-white">¡Hola! Somos apasionados por el mundo motor y enemigos número uno de la burocracia. Nacimos de la experiencia real administrando concesionarios de motocicletas en Villeta, Cundinamarca. Sabemos perfectamente lo frustrante que es perder un día entero haciendo filas, por eso decidimos usar la tecnología para transformar un dolor de cabeza en un proceso de un par de clics. No somos un bot más, somos tu copiloto de confianza.</div></div>
+                            </div>
+                            <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
+                                <h2 class="accordion-header" id="headingOne"><button class="accordion-button collapsed fw-bold bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">¿Los trámites son 100% legales y seguros?</button></h2>
+                                <div class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted bg-white">Totalmente. Trabajamos bajo la normativa vigente y registramos todo directamente en las plataformas oficiales (RUNT, SIM, Secretarías de Tránsito) para garantizar la total legalidad de tus documentos.</div></div>
                             </div>
                             <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
                                 <h2 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed fw-bold bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">¿Cuáles son los métodos de pago aceptados?</button></h2>
@@ -261,7 +271,6 @@
         <!-- Call to Action -->
         <section class="call-to-action text-center py-5 bg-light">
             <div class="container py-5">
-                <!-- Título introductorio antes de la tarjeta-->
                 <div class="text-center mb-5">
                     <h2 class="fw-bold display-6">Atención Personalizada</h2>
                     <p class="text-muted lead">Estamos a un mensaje de distancia para resolver tus dudas.</p>
@@ -269,7 +278,6 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
                         <div class="card shadow-lg rounded-4 border border-primary border-2 overflow-hidden">
-                            <!-- Fondo blanco en el cuerpo de la tarjeta-->
                             <div class="card-body p-5 bg-white">
                                 <h3 class="fw-bold text-primary mb-3">¿Listo para agilizar tus trámites?</h3>
                                 <p class="text-muted mb-4 lead">Escríbenos ahora mismo. Un asesor humano está listo para ayudarte con tu proceso de forma inmediata.</p>
@@ -285,23 +293,31 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-white py-4 border-top">
+        <!-- Footer (AQUÍ VAN LOS TÉRMINOS Y CONDICIONES)-->
+        <footer class="footer bg-white py-5 border-top">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 text-center text-lg-start"><p class="text-muted small mb-0">&copy; Tránsito Express JD 2026. Todos los derechos reservados.</p></div>
-                    <div class="col-lg-6 text-center text-lg-end mt-3 mt-lg-0">
+                    <div class="col-lg-4 text-center text-lg-start mb-3 mb-lg-0"><p class="text-muted small mb-0">&copy; Tránsito Express JD 2026. Todos los derechos reservados.</p></div>
+                    <div class="col-lg-4 text-center mb-3 mb-lg-0">
+                        <!-- Enlaces legales limpios y organizados-->
+                        <a class="text-muted small text-decoration-none me-3" href="#!">Términos y Condiciones</a>
+                        <a class="text-muted small text-decoration-none" href="#!">Política de Privacidad</a>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item me-3">
-                                <a class="text-muted" href="#!"><i class="bi bi-facebook fs-4"></i></a>
+                                <a class="text-muted fs-5" href="#!"><i class="bi bi-facebook"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="text-muted" href="#!"><i class="bi bi-instagram fs-4"></i></a>
+                                <a class="text-muted fs-5" href="#!"><i class="bi bi-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
+        <!-- Botón sutil flotante de Volver Arriba-->
+        <a class="scroll-to-top rounded-circle" href="#page-top" aria-label="Volver arriba"><i class="bi bi-chevron-up"></i></a>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
